@@ -1,0 +1,126 @@
+.container {
+    width: 100vw;
+    /*height: 100vh;*/
+
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+
+    background-image: url("../src/assets/ale.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+}
+
+.text {
+    color: #FFF;
+    text-shadow: 4px 4px 80px rgba(0, 0, 0, 0.20);
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: 7%;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+.text:last-child {
+    text-decoration: none;
+}
+
+.blockText {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.timer {
+    padding: 40px;
+    box-sizing: border-box;
+    color: #FFF;
+
+    text-shadow: 4px 4px 80px rgba(0, 0, 0, 0.20);
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 79%;
+}
+
+.arrow {
+    margin-left: 65px;
+}
+
+.arrowIcon {
+    height: 200px;
+    width: auto;
+}
+
+.backgroundVideo {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        overflow: hidden;
+    }
+
+    .timer {
+        text-align: center;
+        font-size: 26vw;
+        padding: 0;
+    }
+
+    .arrow {
+        margin-left: 72px;
+    }
+
+    .blockText {
+        padding: 0 16px;
+    }
+
+    .text {
+        text-decoration-thickness: 4%;
+    }
+
+    .container {
+        background-image: none;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .blockText {
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .arrow {
+        margin-left: 42px;
+    }
+
+    .arrowIcon {
+        width: 25px;
+        height: 390px;
+    }
+
+    .text {
+        font-size: 17vw;
+        text-decoration-thickness: 7%;
+    }
+}
