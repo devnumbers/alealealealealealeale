@@ -78,7 +78,7 @@ function App() {
                 <video controls={false} style={{
                     top: paddingTop + 'px',
                     height: (containerHeight - paddingTop - paddingBottom) + 'px'
-                }} className={styles.backgroundVideo} autoPlay muted loop playsInline webkit-playsinline="true"
+                }} className={styles.backgroundVideo} autoPlay muted loop playsInline
                        preload="auto">
                     <source src={videio} type="video/mp4"/>
                     Your browser does not support the video tag.
