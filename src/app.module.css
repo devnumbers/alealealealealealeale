@@ -82,7 +82,8 @@
 
     .timer {
         text-align: center;
-        font-size: 26vw;
+        /*font-size: 26vw;*/
+        font-size: 23vw;
         padding: 0;
     }
 

@@ -5,7 +5,14 @@ import arrowMobile from './assets/arrowMobile.png';
 import videio from './assets/IMG_4103.mp4';
 
 function App() {
-    const [timeLeft, setTimeLeft] = useState(0);
+
+    const targetDateRef = useRef(new Date(2025, 3, 18).getTime()); // 18 April 2025
+    const [timeLeft, setTimeLeft] = useState(() => {
+        const now = new Date().getTime();
+        const difference = targetDateRef.current - now;
+        return Math.max(0, Math.floor(difference / 1000));
+    });
+
     const [isMobile, setIsMobile] = useState(false);
     const [containerHeight, setContainerHeight] = useState(window.innerHeight);
 
@@ -14,11 +21,12 @@ function App() {
     const [paddingBottom, setPaddingBottom] = useState(0);
 
     useEffect(() => {
-        const randomTime = Math.floor(Math.random() * 86400);
-        setTimeLeft(randomTime);
-
         const timer = setInterval(() => {
-            setTimeLeft(prev => prev + 1);
+            setTimeLeft(() => {
+                const now = new Date().getTime();
+                const difference = targetDateRef.current - now;
+                return Math.max(0, Math.floor(difference / 1000));
+            });
         }, 1000);
 
         return () => clearInterval(timer);
