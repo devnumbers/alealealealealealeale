@@ -1,4 +1,4 @@
-import {useState, useEffect, useRef} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import styles from './app.module.css';
 import arrow from './assets/arrow.png';
 import arrowMobile from './assets/arrowMobile.png';
@@ -104,7 +104,9 @@ function App() {
                     />
                 </div>
                 <div className={styles.blockDesk}>
-                    <div className={styles.text}>listen</div>
+                    <div className={styles.text}>
+                        <a href={'https://band.link/save-presave?type=yandex&bandlink_id=undefined&bandlink_hash=mSGFL&upc=4630462688551&redirectUrl=https://muz.lc/alealealeale'}
+                           target={'_blank'}>listen</a></div>
                     <div className={styles.text}>virid° — ale?</div>
                 </div>
             </div>
