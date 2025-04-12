@@ -6,7 +6,7 @@ import videio from './assets/IMG_4103.mp4';
 
 function App() {
 
-    const targetDateRef = useRef(new Date(2025, 3, 25).getTime()); // 18 April 2025
+    const targetDateRef = useRef(new Date(2025, 3, 25).getTime());
     const [timeLeft, setTimeLeft] = useState(() => {
         const now = new Date().getTime();
         const difference = targetDateRef.current - now;
